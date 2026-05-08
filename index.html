@@ -1,0 +1,325 @@
+<!--
+FILE: index.html
+VERSI PWA GATRA CAFE
+Upload semua file ke GitHub Pages
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>GATRA Cafe</title>
+
+  <meta name="theme-color" content="#7A3F17"/>
+  <meta name="description" content="Warm coffee experience from GATRA Cafe">
+
+  <!-- IOS SUPPORT -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- MANIFEST -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Montserrat',sans-serif;
+      background:#f4efe8;
+      color:#222;
+    }
+
+    .hero{
+      min-height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+      url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1400&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:30px;
+    }
+
+    .hero-content{
+      max-width:700px;
+    }
+
+    .hero h1{
+      color:white;
+      font-size:70px;
+      letter-spacing:5px;
+      margin-bottom:15px;
+      font-weight:800;
+    }
+
+    .hero p{
+      color:#eee;
+      line-height:1.8;
+      margin-bottom:30px;
+      font-size:17px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#B5781F;
+      color:white;
+      text-decoration:none;
+      padding:14px 30px;
+      border-radius:100px;
+      font-weight:700;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+      background:#7A3F17;
+    }
+
+    .section{
+      padding:80px 20px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      color:#7A3F17;
+      font-size:38px;
+      margin-bottom:10px;
+    }
+
+    .section-title p{
+      color:#777;
+    }
+
+    .menu-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,.08);
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+    }
+
+    .card img{
+      width:100%;
+      height:230px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:22px;
+    }
+
+    .card-content h3{
+      color:#7A3F17;
+      margin-bottom:10px;
+    }
+
+    .card-content p{
+      color:#666;
+      line-height:1.6;
+      font-size:14px;
+      margin-bottom:18px;
+    }
+
+    .price{
+      color:#B5781F;
+      font-weight:700;
+      font-size:18px;
+    }
+
+    footer{
+      background:#7A3F17;
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+      margin-top:50px;
+    }
+
+    footer h3{
+      margin-bottom:10px;
+      font-size:30px;
+      letter-spacing:2px;
+    }
+
+    .install-btn{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+
+      background:#7A3F17;
+      color:white;
+
+      border:none;
+      border-radius:100px;
+
+      padding:14px 20px;
+      cursor:pointer;
+
+      font-weight:700;
+
+      box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+      display:none;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:48px;
+      }
+
+      .hero p{
+        font-size:15px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>GATRA</h1>
+
+      <p>
+        Warm atmosphere, handcrafted coffee, and unforgettable moments.
+      </p>
+
+      <a href="#menu" class="btn">
+        Explore Menu
+      </a>
+    </div>
+  </section>
+
+  <section class="section" id="menu">
+
+    <div class="section-title">
+      <h2>Signature Menu</h2>
+      <p>Freshly brewed for your perfect day</p>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=1200&auto=format&fit=crop">
+        <div class="card-content">
+          <h3>Caramel Latte</h3>
+          <p>
+            Creamy espresso blend with caramel sweetness.
+          </p>
+          <div class="price">Rp 38.000</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop">
+        <div class="card-content">
+          <h3>Iced Americano</h3>
+          <p>
+            Refreshing espresso with clean bold flavor.
+          </p>
+          <div class="price">Rp 30.000</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop">
+        <div class="card-content">
+          <h3>Chicken Croissant</h3>
+          <p>
+            Buttery croissant with premium chicken filling.
+          </p>
+          <div class="price">Rp 45.000</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <h3>GATRA</h3>
+    <p>Warm • Elegant • Modern</p>
+  </footer>
+
+  <!-- INSTALL BUTTON -->
+  <button class="install-btn" id="installBtn">
+    Install App
+  </button>
+
+  <script>
+
+    // REGISTER SERVICE WORKER
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js');
+    }
+
+    // PWA INSTALL
+    let deferredPrompt;
+
+    const installBtn = document.getElementById('installBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+
+      e.preventDefault();
+
+      deferredPrompt = e;
+
+      installBtn.style.display = 'block';
+
+    });
+
+    installBtn.addEventListener('click', async () => {
+
+      if (!deferredPrompt) return;
+
+      deferredPrompt.prompt();
+
+      const { outcome } = await deferredPrompt.userChoice;
+
+      if (outcome === 'accepted') {
+        installBtn.style.display = 'none';
+      }
+
+      deferredPrompt = null;
+
+    });
+
+  </script>
+
+</body>
+</html>
